@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+ <!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,10 @@
         <h2>Add New Product</h2>
     </div>
     <div>
-        <a href="{{ route('products.index') }}">Back</a>
+        {{-- <a href="{{ route('products.index') }}">Back</a> --}}
     </div>
-    <form action="{{ route('products.store') }}" method="POST">
-        @csrf 
+   {{--  <form action="{{ route('products.store') }}" method="POST"> --}}
+    {{--    @csrf --}} 
         <div>
             <strong>Name:</strong>
             <input type="text" name="name" placeholder="Name">
@@ -29,9 +29,9 @@
         <div>
             <strong>Category:</strong>
             <select name="category_id">
-                @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
+           {{--   @foreach ($categories as $category) --}}
+            {{--    <option value="{{ $category->id }}">{{ $category->name }}</option> --}}
+            {{--    @endforeach --}}
             </select>
         </div>
         <div>
@@ -52,11 +52,11 @@
             </div>
             <div class="form-group">
                 <label for="product-description">商品説明</label>
-                <textarea name="description"  id="product-description" class="form-control">
+                <textarea name="description"  id="product-description" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label for="product-price">価格</label>
-                <input type="number" name="price" id="product-price" class=""
+                <input type="number" name="price" id="product-price" class="form-control">
             </div>
             <div class="form-group">
                 <label for="product-category">カテゴリ</label>
@@ -67,7 +67,7 @@
                 </select>
 
             </div>
-            <button type="submit" class="submit" class="btn btn-success">商品を登録</button>
+            <button type="submit" class="btn btn-success">商品を登録</button>
         </form>
         <a href="{{  route('products.index') }}">商品一覧に戻る</a>
         </div>

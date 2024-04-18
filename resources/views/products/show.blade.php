@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,21 +10,21 @@
         <h2> Show Product</h2>
     </div>
     <div>
-        <a href="{{ route('products.index') }}"> Back</a>
+    {{-- <a href="{{ route('products.index') }}"> Back</a> --}}
     </div>
 
     <div>
         <strong>Name:</strong>
-        {{ $product->name }}
+    {{--  {{ $product->name }} --}}
     </div>
     <div>
         <strong>Description</strong>
-        {{ $product->description  }}
+        {{--    {{ $product->description  }} --}}
     </div>
     <div>
         <strong>Price:</strong>
-        {{ $product->price }}
-    </div>
+        {{--     {{ $product->price }} --}}
+    </div> -->
     @extends('layouts.app')
 
     @section('content')
@@ -52,7 +52,7 @@
                 <form method="POST" class="m-3 align-items-end">
                     @csrf 
                     <input type="hidden" name="id" value="{{$product->id}}">
-                    <input type="hidden" name="name" value="{{$product->name}}"
+                    <input type="hidden" name="name" value="{{$product->name}}">
                     <input type="hidden" name="price" value="{{ $product->price }}">
                     <div class="form-group row">
                         <label for="quantity" class="col-sm-2 col-form-label">数量</label>
@@ -69,7 +69,7 @@
                             </button>
                         </div>
                         <div class="col-5">
-                            <a href="/products/{{ $product->id }}/favortit" class="btn samuraimart-favarite-button text-dark w-100">
+                            <a href="/products/{{ $product->id }}/favorite" class="btn samuraimart-favorite-button text-dark w-100">
                                 <i class="fa fa-heart"></i>
                                 お気に入り
                         </a>
@@ -83,10 +83,7 @@
                 <h3 class="float-left">カスタマーレビュー</h3>
             </div>
         
-        <div class="offset-1 col-11">
-            <hr class="w-100">
-            <h3 class="float-left">カスタマーレビュー</h3>
-        </div>
+        
         <div class="offset-1 col-10">
 
         </div>
