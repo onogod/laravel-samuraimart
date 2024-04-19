@@ -1,4 +1,4 @@
- <!--<!DOCTYPE html>
+ {{--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,10 +10,10 @@
         <h2>Add New Product</h2>
     </div>
     <div>
-        {{-- <a href="{{ route('products.index') }}">Back</a> --}}
+        <a href="{{ route('products.index') }}">Back</a> 
     </div>
-   {{--  <form action="{{ route('products.store') }}" method="POST"> --}}
-    {{--    @csrf --}} 
+    <form action="{{ route('products.store') }}" method="POST"> 
+        @csrf  
         <div>
             <strong>Name:</strong>
             <input type="text" name="name" placeholder="Name">
@@ -29,15 +29,15 @@
         <div>
             <strong>Category:</strong>
             <select name="category_id">
-           {{--   @foreach ($categories as $category) --}}
-            {{--    <option value="{{ $category->id }}">{{ $category->name }}</option> --}}
-            {{--    @endforeach --}}
+            @foreach ($categories as $category) 
+                <option value="{{ $category->id }}">{{ $category->name }}</option> 
+                @endforeach 
             </select>
         </div>
         <div>
             <button type="submit">Submit</button>
         </div>
-    </form> -->
+    </form> --}}
     @extends('layouts.app')
 
     @section('content')

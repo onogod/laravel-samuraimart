@@ -1,4 +1,4 @@
- <!--<!DOCTYPE html>
+{{--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,21 +10,21 @@
         <h2> Show Product</h2>
     </div>
     <div>
-    {{-- <a href="{{ route('products.index') }}"> Back</a> --}}
+    <a href="{{ route('products.index') }}"> Back</a> 
     </div>
 
     <div>
         <strong>Name:</strong>
-    {{--  {{ $product->name }} --}}
+    {{ $product->name }} 
     </div>
     <div>
         <strong>Description</strong>
-        {{--    {{ $product->description  }} --}}
+            {{ $product->description  }} 
     </div>
     <div>
         <strong>Price:</strong>
-        {{--     {{ $product->price }} --}}
-    </div> -->
+            {{ $product->price }} 
+    </div> --}}
     @extends('layouts.app')
 
     @section('content')
